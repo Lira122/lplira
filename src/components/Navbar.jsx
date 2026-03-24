@@ -5,7 +5,7 @@ import { Sparkles } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Navbar() {
+export default function Navbar({ onOpenModal }) {
   const navRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
 
@@ -37,7 +37,7 @@ export default function Navbar() {
         <a href="#protocol" className="hover:text-accent transition-colors link-lift">Protocolo</a>
       </div>
 
-      <button className="hidden md:flex btn-magnetic slide-bg-container items-center justify-center bg-accent text-white border border-accent px-6 py-2 rounded-full overflow-hidden text-sm font-heading shadow-[0_0_15px_rgba(123,97,255,0.4)]">
+      <button onClick={() => onOpenModal('consultoria')} className="hidden md:flex btn-magnetic slide-bg-container items-center justify-center bg-accent text-white border border-accent px-6 py-2 rounded-full overflow-hidden text-sm font-heading shadow-[0_0_15px_rgba(123,97,255,0.4)]">
         <span className="slide-bg-layer bg-white"></span>
         <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">Iniciar Sequência</span>
       </button>

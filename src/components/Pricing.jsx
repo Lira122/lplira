@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Pricing() {
+export default function Pricing({ onOpenModal }) {
   const ctaRef = useRef(null);
   
   useEffect(() => {
@@ -42,13 +42,19 @@ export default function Pricing() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="btn-magnetic w-full sm:w-auto slide-bg-container inline-flex items-center justify-center border border-accent bg-accent text-white px-10 py-5 rounded-full text-lg font-heading tracking-wide overflow-hidden shadow-[0_0_20px_#8A7CFF]">
+            <button 
+              onClick={() => onOpenModal('consultoria')}
+              className="btn-magnetic w-full sm:w-auto slide-bg-container inline-flex items-center justify-center border border-accent bg-accent text-white px-10 py-5 rounded-full text-lg font-heading tracking-wide overflow-hidden shadow-[0_0_20px_#8A7CFF]"
+            >
               <span className="slide-bg-layer bg-white"></span>
               <span className="relative z-10 transition-colors duration-300 group-hover:text-primary font-bold">Agendar consultoria</span>
             </button>
-            <a href="https://wa.me/" className="btn-magnetic w-full sm:w-auto inline-flex items-center justify-center border border-white/20 bg-transparent text-white hover:bg-white/5 hover:border-white/40 px-8 py-5 rounded-full text-lg font-heading tracking-wide transition-colors">
+            <button 
+              onClick={() => onOpenModal('whatsapp')}
+              className="btn-magnetic w-full sm:w-auto inline-flex items-center justify-center border border-white/20 bg-transparent text-white hover:bg-white/5 hover:border-white/40 px-8 py-5 rounded-full text-lg font-heading tracking-wide transition-colors"
+            >
               Falar no WhatsApp
-            </a>
+            </button>
           </div>
         </div>
       </div>

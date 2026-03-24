@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-export default function Hero() {
+export default function Hero({ onOpenModal }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -58,7 +58,10 @@ export default function Hero() {
         </p>
 
         <div className="hero-btn mt-10">
-          <button className="btn-magnetic slide-bg-container inline-flex items-center justify-center border border-accent/50 bg-accent text-white px-8 py-4 rounded-full text-lg font-heading tracking-wide overflow-hidden shadow-[0_0_20px_#8A7CFF]">
+          <button 
+            onClick={() => onOpenModal('consultoria')}
+            className="btn-magnetic slide-bg-container inline-flex items-center justify-center border border-accent/50 bg-accent text-white px-8 py-4 rounded-full text-lg font-heading tracking-wide overflow-hidden shadow-[0_0_20px_#8A7CFF]"
+          >
             <span className="slide-bg-layer bg-white"></span>
             <span className="relative z-10 group-hover:text-primary transition-colors font-bold">Agende uma consultoria</span>
           </button>
