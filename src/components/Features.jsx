@@ -179,7 +179,7 @@ export default function Features() {
   }, []);
 
   return (
-    <section id="features" ref={containerRef} className="w-full py-24 md:py-32 bg-background px-6 relative z-20 rounded-t-[3rem] -mt-10">
+    <section id="features" ref={containerRef} className="w-full py-16 md:py-32 bg-primary px-4 md:px-6 relative z-20 rounded-t-[2rem] md:rounded-t-[3rem] -mt-10">
       <div className="max-w-7xl mx-auto">
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

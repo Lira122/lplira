@@ -98,25 +98,25 @@ export default function Protocol() {
   ];
 
   return (
-    <section id="protocol" ref={containerRef} className="protocol-container relative w-full bg-primary pb-32">
+    <section id="protocol" ref={containerRef} className="protocol-container relative w-full bg-primary pb-16 md:pb-32">
       {protocols.map((p, i) => (
-        <div key={i} className="protocol-card h-[100vh] w-full flex items-center justify-center sticky top-0 bg-primary">
-          <div className="w-[90%] max-w-6xl h-[80vh] bg-dark rounded-[3rem] border border-white/5 flex flex-col md:flex-row overflow-hidden shadow-2xl">
+        <div key={i} className="protocol-card min-h-[100vh] w-full flex items-center justify-center sticky top-0 bg-primary py-4">
+          <div className="w-[94%] md:w-[90%] max-w-6xl h-auto min-h-[70vh] md:h-[80vh] bg-dark rounded-[2rem] md:rounded-[3rem] border border-white/5 flex flex-col md:flex-row overflow-hidden shadow-2xl">
             
             {/* Visual Side */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full bg-black/40 relative flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-white/5 shadow-inner">
+            <div className="w-full md:w-1/2 h-48 md:h-full bg-black/40 relative flex items-center justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/5 shadow-inner">
               <p.Animation />
             </div>
 
             {/* Content Side */}
-            <div className="w-full md:w-1/2 h-1/2 md:h-full p-12 md:p-20 flex flex-col justify-center">
-              <span className="font-mono text-secondary text-lg mx-auto md:ml-0 mb-6 tracking-widest bg-secondary/10 w-fit px-4 py-1 rounded-full border border-secondary/20 text-center">
+            <div className="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center">
+              <span className="font-mono text-secondary text-sm md:text-lg mx-auto md:ml-0 mb-4 md:mb-6 tracking-widest bg-secondary/10 w-fit px-4 py-1 rounded-full border border-secondary/20 text-center">
                 STEP // {p.step}
               </span>
-              <h3 className="font-heading font-bold text-4xl md:text-5xl text-white mb-8 text-center md:text-left shadow-sm">
+              <h3 className="font-heading font-bold text-2xl md:text-5xl text-white mb-4 md:mb-8 text-center md:text-left">
                 {p.title}
               </h3>
-              <p className="font-sans text-grayText text-lg leading-relaxed text-center md:text-left">
+              <p className="font-sans text-grayText text-sm md:text-lg leading-relaxed text-center md:text-left">
                 {p.desc}
               </p>
             </div>

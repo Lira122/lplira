@@ -28,7 +28,7 @@ export default function Hero({ onOpenModal }) {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full h-[100dvh] flex items-end justify-start overflow-hidden bg-primary"
+      className="relative w-full min-h-[100dvh] flex items-center md:items-end justify-start overflow-hidden bg-primary"
     >
       {/* Background Image */}
       <div 
@@ -40,27 +40,27 @@ export default function Hero({ onOpenModal }) {
       <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24 md:pb-32 lg:w-4/5 ml-0 lg:ml-[10%]">
-        <p className="hero-text text-accent font-mono text-xs md:text-sm tracking-widest uppercase mb-6 pl-1 border-l-2 border-secondary">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 pt-28 pb-16 md:pt-0 md:pb-32 lg:w-4/5 lg:ml-[10%]">
+        <p className="hero-text text-accent font-mono text-[10px] md:text-sm tracking-widest uppercase mb-4 md:mb-6 pl-2 border-l-2 border-secondary">
           LIRA Agency // Crescimento Premium
         </p>
-        <h1 className="flex flex-col gap-2 md:gap-0 leading-[1.05]">
-          <span className="hero-text font-heading font-bold text-4xl md:text-6xl text-white">
+        <h1 className="flex flex-col gap-1 md:gap-0 leading-[1.1] md:leading-[1.05]">
+          <span className="hero-text font-heading font-bold text-2xl sm:text-3xl md:text-6xl text-white">
             Transformamos tráfego, automações
           </span>
-          <span className="hero-text font-drama italic text-6xl md:text-8xl text-secondary mt-1 md:mt-[-5px] pb-4">
+          <span className="hero-text font-drama italic text-4xl sm:text-5xl md:text-8xl text-secondary mt-1 md:mt-[-5px] pb-2 md:pb-4">
             e IA em crescimento real.
           </span>
         </h1>
         
-        <p className="hero-text text-grayText mt-6 max-w-2xl text-lg font-sans leading-relaxed">
+        <p className="hero-text text-grayText mt-4 md:mt-6 max-w-2xl text-sm md:text-lg font-sans leading-relaxed">
           Estruturamos tráfego pago, automações inteligentes e presença digital para gerar vendas previsíveis todos os meses.
         </p>
 
-        <div className="hero-btn mt-10">
+        <div className="hero-btn mt-8 md:mt-10">
           <button 
             onClick={() => onOpenModal('consultoria')}
-            className="btn-magnetic slide-bg-container inline-flex items-center justify-center border border-accent/50 bg-accent text-white px-8 py-4 rounded-full text-lg font-heading tracking-wide overflow-hidden shadow-[0_0_20px_#8A7CFF]"
+            className="btn-magnetic slide-bg-container inline-flex items-center justify-center border border-accent/50 bg-accent text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-heading tracking-wide overflow-hidden shadow-[0_0_20px_#8A7CFF]"
           >
             <span className="slide-bg-layer bg-white"></span>
             <span className="relative z-10 group-hover:text-primary transition-colors font-bold">Agende uma consultoria</span>
